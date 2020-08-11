@@ -9,6 +9,6 @@ namespace NameAgeGender.Models
     public class PersonInfoDBcontext : DbContext
     {
         public PersonInfoDBcontext(DbContextOptions options): base(options) { }
-        public DbSet<Person> Persons { get; set; }
+        public DbSet<PersonModel> Persons { get; set; }
     }
 }

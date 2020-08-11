@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace NameAgeGender.Models
 {
-    public class Person
+    public class PersonModel
     {
         public int Id { get; set; }
         public string Forename { get; set; }

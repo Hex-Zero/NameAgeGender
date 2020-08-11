@@ -1,0 +1,50 @@
+﻿@page
+@model NameAgeGender.Pages.Person.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>PersonModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PersonModel.Id" />
+            <div class="form-group">
+                <label asp-for="PersonModel.Forename" class="control-label"></label>
+                <input asp-for="PersonModel.Forename" class="form-control" />
+                <span asp-validation-for="PersonModel.Forename" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonModel.Surename" class="control-label"></label>
+                <input asp-for="PersonModel.Surename" class="form-control" />
+                <span asp-validation-for="PersonModel.Surename" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonModel.Age" class="control-label"></label>
+                <input asp-for="PersonModel.Age" class="form-control" />
+                <span asp-validation-for="PersonModel.Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonModel.Gender" class="control-label"></label>
+                <input asp-for="PersonModel.Gender" class="form-control" />
+                <span asp-validation-for="PersonModel.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
